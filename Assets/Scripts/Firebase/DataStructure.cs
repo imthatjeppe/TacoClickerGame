@@ -6,10 +6,10 @@ using UnityEngine;
 public class UserInfo
 {
 	public string name;
-	public float ColorHUE;
-	public bool Hidden;
-	public Vector3 Position;
-	public List<string> activeGames;
+	public float passiveIncome;
+	public float itemCost;
+	public float score;
+	public float clickMultiplier;
 }
 
 [Serializable]

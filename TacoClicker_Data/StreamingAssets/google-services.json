@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "901619489062",
+    "firebase_url": "https://tacoclicker-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tacoclicker",
+    "storage_bucket": "tacoclicker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901619489062:android:08e418dfb7319205da49e7",
+        "android_client_info": {
+          "package_name": "com.Yrgo.TacoClicker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901619489062-c88b8ge5gjiadv42o4klnu8g6326na1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7tjm8_6AMzy3S1WZ2aY6GF7uaivWZRVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901619489062-c88b8ge5gjiadv42o4klnu8g6326na1o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

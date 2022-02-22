@@ -21,7 +21,7 @@ public class clickerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = string.Format("Score: {0:0.000}", score);
+        scoreText.text = string.Format("Score: {0:0.0}", score);
     }
     public void getScoreOnCookieClick()
     {
