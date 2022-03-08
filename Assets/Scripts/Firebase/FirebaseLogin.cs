@@ -38,6 +38,10 @@ public class FirebaseLogin : MonoBehaviour
 			auth = FirebaseAuth.DefaultInstance;
 		});
 
+		//textgrej = PlayerData.data.name;
+		//PlayerData.data.name = "hej";
+		//PlayerData.SaveData();
+
 		//Disable button untill we have logged in
 		playButton.interactable = false;
 

@@ -1,130 +1,130 @@
-//////////////using System.Collections.Generic;
-//////////////using TMPro;
-//////////////using UnityEngine;
-//////////////using UnityEngine.UI;
+//using system.collections.generic;
+//using tmpro;
+//using unityengine;
+//using unityengine.ui;
 
-//////////////public class GameSelect : MonoBehaviour
-//////////////{
-//////////////    //Editor Connections
-//////////////    public Transform gameListHolder;
-//////////////    public GameObject gameButtonPrefab;
+//public class gameselect : monobehaviour
+//{
+//    editor connections
+//    public transform gamelistholder;
+//    public gameobject gamebuttonprefab;
 
-//////////////    private void Start()
-//////////////    {
-//////////////        //UpdateGameList();
-//////////////    }
+//    private void start()
+//    {
+//        updategamelist();
+//    }
 
-//////////////    //private void UpdateGameList()
-//////////////    //{
-//////////////    //	//clear/remove the old list, If we have one.
-//////////////    //	foreach (Transform child in gameListHolder)
-//////////////    //		Destroy(child.gameObject);
+//    private void updategamelist()
+//    {
+//        //clear/remove the old list, if we have one.
+//        foreach (transform child in gamelistholder)
+//            destroy(child.gameobject);
 
-//////////////    //	//create new list, load each of the users active games
-//////////////    //	foreach (string gameID in PlayerData.data.activeGames)
-//////////////    //	{
-//////////////    //		SaveManager.Instance.LoadData("games/" + gameID, LoadGameInfo);
-//////////////    //	}
+//        //create new list, load each of the users active games
+//        foreach (string gameid in playerdata.data.activegames)
+//        {
+//            savemanager.instance.loaddata("games/" + gameid, loadgameinfo);
+//        }
 
-//////////////    //	//We have to few games, create a create game button
-//////////////    //	if (PlayerData.data.activeGames.Count < 5)
-//////////////    //	{
-//////////////    //		var newButton = Instantiate(gameButtonPrefab, gameListHolder).GetComponent<Button>();
-//////////////    //		newButton.GetComponentInChildren<TextMeshProUGUI>().text = "New Game";
-//////////////    //		newButton.onClick.AddListener(() => SaveManager.Instance.LoadData("games/", JoinRandomGame));
-//////////////    //	}
-//////////////    //}
+//        //we have to few games, create a create game button
+//        if (playerdata.data.activegames.count < 5)
+//        {
+//            var newbutton = instantiate(gamebuttonprefab, gamelistholder).getcomponent<button>();
+//            newbutton.getcomponentinchildren<textmeshprougui>().text = "new game";
+//            newbutton.onclick.addlistener(() => savemanager.instance.loaddata("games/", joinrandomgame));
+//        }
+//    }
 
-//////////////    //Create button for the games, and add onclick events with the corresponding game info.
-//////////////    public void LoadGameInfo(string json)
-//////////////    {
-//////////////        var gameInfo = JsonUtility.FromJson<GameInfo>(json);
+//    create button for the games, and add onclick events with the corresponding game info.
+//    public void loadgameinfo(string json)
+//    {
+//        var gameinfo = jsonutility.fromjson<gameinfo>(json);
 
-//////////////        var newButton = Instantiate(gameButtonPrefab, gameListHolder).GetComponent<Button>();
-//////////////        newButton.GetComponentInChildren<TextMeshProUGUI>().text = gameInfo.displayName;
-//////////////        //TODO: display more game status on each button.
+//        var newbutton = instantiate(gamebuttonprefab, gamelistholder).getcomponent<button>();
+//        newbutton.getcomponentinchildren<textmeshprougui>().text = gameinfo.displayname;
+//    todo: display more game status on each button.
 
-//////////////        newButton.onClick.AddListener(() => SceneController.Instance.StartGame(gameInfo));
-//////////////    }
+//    newbutton.onclick.addlistener(() => scenecontroller.instance.startgame(gameinfo));
+//    }
 
-//////////////    public void CreateGame()
-//////////////    {
-//////////////        //Create a new game and start filling out the info.
-//////////////        var newGameInfo = new GameInfo();
+//    public void creategame()
+//    {
+//        create a new game and start filling out the info.
+//        var newgameinfo = new gameinfo();
 
-//////////////        newGameInfo.seed = Random.Range(0, int.MaxValue);
-//////////////        newGameInfo.displayName = PlayerData.data.name + "'s game";
+//        newgameinfo.seed = random.range(0, int.maxvalue);
+//        newgameinfo.displayname = playerdata.data.name + "'s game";
 
-//////////////        //Add the user as the first player
-//////////////        newGameInfo.players = new List<UserInfo>();
-//////////////        newGameInfo.players.Add(PlayerData.data);
+//        add the user as the first player
+//        newgameinfo.players = new list<userinfo>();
+//        newgameinfo.players.add(playerdata.data);
 
-//////////////        //get a unique ID for the game
-//////////////        string key = SaveManager.Instance.GetKey("games/");
-//////////////        newGameInfo.gameID = key;
+//        get a unique id for the game
+//        string key = savemanager.instance.getkey("games/");
+//        newgameinfo.gameid = key;
 
-//////////////        //convert to json
-//////////////        string data = JsonUtility.ToJson(newGameInfo);
+//        convert to json
+//        string data = jsonutility.tojson(newgameinfo);
 
-//////////////        //Save our new game
-//////////////        string path = "games/" + key;
-//////////////        SaveManager.Instance.SaveData(path, data);
+//        save our new game
+//        string path = "games/" + key;
+//        savemanager.instance.savedata(path, data);
 
-//////////////        //add the key to our active games
-//////////////        //GameCreated(key, newGameInfo);
-//////////////    }
+//        add the key to our active games
+//        gamecreated(key, newgameinfo);
+//    }
 
-//////////////    //public void GameCreated(string gameKey, GameInfo gameInfo)
-//////////////    //{
-//////////////    //	//If we dont have any active games, create the list.
-//////////////    //	//PlayerData.data.activeGames ??= new List<string>();
-//////////////    //	//PlayerData.data.activeGames.Add(gameKey);
+//    public void gamecreated(string gamekey, gameinfo gameinfo)
+//    {
+//        //if we dont have any active games, create the list.
+//        //playerdata.data.activegames ??= new list<string>();
+//        //playerdata.data.activegames.add(gamekey);
 
-////////////////	//save our user with our new game
-////////////////	PlayerData.SaveData();
+//        //save our user with our new game
+//        playerdata.savedata();
 
-////////////////	//Start the game
-////////////////	SceneController.Instance.StartGame(gameInfo);
-////////////////}
+//        //start the game
+//        scenecontroller.instance.startgame(gameinfo);
+//    }
 
-////////////////We will try to join a random game, if we can't we create a new game.
-////////////////public void JoinRandomGame(List<string> data)
-////////////////{
-////////////////	List<GameInfo> games = new List<GameInfo>();
+//    we will try to join a random game, if we can't we create a new game.
+//public void joinrandomgame(list<string> data)
+//    {
+//        list<gameinfo> games = new list<gameinfo>();
 
-////////////////	foreach (var item in data)
-////////////////		games.Add(JsonUtility.FromJson<GameInfo>(item));
+//        foreach (var item in data)
+//            games.add(jsonutility.fromjson<gameinfo>(item));
 
-////////////////	foreach (var activeGame in games)
-////////////////	{
-////////////////		//Don't list our own games or full games.
-////////////////		if (PlayerData.data.activeGames.Contains(activeGame.gameID) || activeGame.players.Count > 1)
-////////////////			continue;
+//        foreach (var activegame in games)
+//        {
+//            //don't list our own games or full games.
+//            if (playerdata.data.activegames.contains(activegame.gameid) || activegame.players.count > 1)
+//                continue;
 
-////////////////		JoinGame(activeGame);
-////////////////		return;
-////////////////	}
+//            joingame(activegame);
+//            return;
+//        }
 
-////////////////	//No random games to join, create a new game.
-////////////////	CreateGame();
-////////////////}
+//        //no random games to join, create a new game.
+//        creategame();
+//    }
 
-////////////////	public void JoinGame(GameInfo gameInfo)
-////////////////	{
-////////////////		Debug.Log("joining game: " + gameInfo.gameID);
-////////////////		PlayerData.data.activeGames.Add(gameInfo.gameID);
+//    public void joingame(gameinfo gameinfo)
+//    {
+//        debug.log("joining game: " + gameinfo.gameid);
+//        playerdata.data.activegames.add(gameinfo.gameid);
 
-////////////////		//save our user with our new game
-////////////////		PlayerData.SaveData();
+//        //save our user with our new game
+//        playerdata.savedata();
 
-////////////////		gameInfo.players.Add(PlayerData.data);
+//        gameinfo.players.add(playerdata.data);
 
-////////////////		//Update new game name
-////////////////		gameInfo.displayName = gameInfo.players[0].name + " vs " + PlayerData.data.name;
+//        //update new game name
+//        gameinfo.displayname = gameinfo.players[0].name + " vs " + playerdata.data.name;
 
-////////////////		string jsonString = JsonUtility.ToJson(gameInfo);
+//        string jsonstring = jsonutility.tojson(gameinfo);
 
-////////////////		//Update the game
-////////////////		SaveManager.Instance.SaveData("games/" + gameInfo.gameID, jsonString);
-////////////////	}
-////////////////}
+//        //update the game
+//        savemanager.instance.savedata("games/" + gameinfo.gameid, jsonstring);
+//    }
+//}

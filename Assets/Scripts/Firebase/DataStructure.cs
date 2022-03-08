@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class UserInfo
+public class DataStructure
 {
 	public string name;
 	public float passiveIncome;
@@ -18,5 +18,5 @@ public class GameInfo
 	public string displayName;
 	public string gameID;
 	public int seed;
-	public List<UserInfo> players;
+	public List<DataStructure> players;
 }

@@ -27,4 +27,10 @@ public class clickerScript : MonoBehaviour
     {
         score += clicking.clickMultiplier;
     }
+
+    public void addScoreToPlayerData()
+    {
+        Debug.Log("Hej Hej Hej");
+        score = PlayerData.data.score;
+    }
 }

@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-	public static UserInfo data;
+	public static DataStructure data;
 	static string userPath;
+
+	public clickerScript score;
 
 	private void Start()
 	{
@@ -14,22 +16,32 @@ public class PlayerData : MonoBehaviour
 
 	void OnSignIn()
 	{
+		Debug.Log("In OnSignIn");
 		userPath = "users/" + FirebaseAuth.DefaultInstance.CurrentUser.UserId;
+
+		Debug.Log("onsignin 2");
 		SaveManager.Instance.LoadData(userPath, OnLoadData);
 	}
 
 	void OnLoadData(string json)
 	{
+		
 		if (json != null)
 		{
-			data = JsonUtility.FromJson<UserInfo>(json);
+			Debug.Log("Hej Hej");
+			data = JsonUtility.FromJson<DataStructure>(json);
+
+			Debug.Log(data.score);
+			score.score = data.score;
+			//score.addScoreToPlayerData();
 		}
 		else
 		{
-			data = new UserInfo();
-			SaveData();
+			data = new DataStructure();
+			InvokeRepeating(nameof(SaveData), 0, 15);
+			data.score = 100;
 		}
-
+		Debug.Log("OnLoadData before playerdataloaded");
 		FindObjectOfType<FirebaseLogin>()?.PlayerDataLoaded();
 	}
 
