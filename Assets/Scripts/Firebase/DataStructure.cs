@@ -3,20 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class DataStructure
+
+public class DataStructureStyle
 {
-	public string name;
-	public float passiveIncome;
-	public float itemCost;
-	public float score;
-	public float clickMultiplier;
+	public string userName;
+	public float passiveIncome, score, clickMultiplier;
 }
 
 [Serializable]
-public class GameInfo
+public class DataStructure : MonoBehaviour//UserData
 {
-	public string displayName;
-	public string gameID;
-	public int seed;
-	public List<DataStructure> players;
+    public string userName;
+    public float passiveIncome, score, clickMultiplier;
+
+    private static DataStructure _instance;
+	
+	public static DataStructure Instance {get { return _instance; } }
+
+    private void Start()
+    {
+        if(_instance == null)
+        {
+			_instance = this;
+			DontDestroyOnLoad(gameObject);
+        } else {
+            Destroy(this.gameObject);
+        }
+
+    }
 }

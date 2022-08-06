@@ -3,6 +3,12 @@ using Firebase.Extensions;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class SavaData
+{
+
+}
+
 public class SaveManager : MonoBehaviour
 {
     private static SaveManager _instance;

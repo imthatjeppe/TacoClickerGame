@@ -32,8 +32,8 @@ public class PlayerData : MonoBehaviour
 			data = JsonUtility.FromJson<DataStructure>(json);
 
 			Debug.Log(data.score);
-			score.score = data.score;
-			//score.addScoreToPlayerData();
+			data.score = score.score;
+			score.addScoreToPlayerData();
 		}
 		else
 		{

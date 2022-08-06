@@ -27,9 +27,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(name);
     }
 
-    internal void StartGame(GameInfo gameInfo)
-    {
-        //GameData.Instance.gameData = gameInfo;
-        SceneManager.LoadScene("Game");
-    }
+    //internal void StartGame(GameInfo gameInfo)
+    //{
+    //    //GameData.Instance.gameData = gameInfo;
+    //    SceneManager.LoadScene("Game");
+    //}
 }

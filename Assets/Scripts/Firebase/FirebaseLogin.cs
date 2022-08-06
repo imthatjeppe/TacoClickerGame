@@ -67,7 +67,7 @@ public class FirebaseLogin : MonoBehaviour
 			}
 		});
 	}
-
+	
 	private void SignIn(string email, string password)
 	{
 		outputText.text = "Attempting to log in";
