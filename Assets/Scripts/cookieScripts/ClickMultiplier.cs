@@ -12,7 +12,7 @@ public class ClickMultiplier : MonoBehaviour
     private PassiveIncomeMeny PassiveIncomeMeny;
     void Start()
     {
-        clickMultiplier = 1;
+        clickMultiplier = DataStructure.Instance.clickMultiplier;
         PassiveIncomeMeny = FindObjectOfType<PassiveIncomeMeny>();
         score = FindObjectOfType<clickerScript>();
     }

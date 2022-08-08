@@ -29,10 +29,11 @@ public class RegisterHandler : MonoBehaviour
 
         auth.SignInWithEmailAndPasswordAsync(email.text, password.text).ContinueWithOnMainThread(task =>
         {
-        userData.userName = userName.text;
-        string json = JsonUtility.ToJson(userData);
+            userData.userName = userName.text;
+            
+            string json = JsonUtility.ToJson(userData);
 
-        db.Child("users").Child(auth.CurrentUser.UserId).SetRawJsonValueAsync(json);
+            db.Child("users").Child(auth.CurrentUser.UserId).SetRawJsonValueAsync(json);
             auth.SignOut();
 
         });

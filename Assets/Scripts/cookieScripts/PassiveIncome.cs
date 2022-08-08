@@ -12,8 +12,8 @@ public class PassiveIncome : MonoBehaviour
     void Start()
     {
         score = FindObjectOfType<clickerScript>();
+        passiveIncome = DataStructure.Instance.passiveIncome;
         passiveIncomeText.text = string.Format("PassiveIncome: {0:0.000}", passiveIncome);
-
     }
 
     // Update is called once per frame
