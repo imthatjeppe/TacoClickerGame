@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PassiveIncome : MonoBehaviour
 {
-    public static float passiveIncome = 0;
+    public float passiveIncome = 0;
 
     public Text passiveIncomeText;
     private clickerScript score;

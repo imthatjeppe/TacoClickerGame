@@ -1330,6 +1330,8 @@ GameObject:
   - component: {fileID: 1866454044}
   - component: {fileID: 1866454045}
   - component: {fileID: 1866454046}
+  - component: {fileID: 1866454047}
+  - component: {fileID: 1866454048}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1466,7 +1468,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd34789ef6649c4cbaabf99da4ac13c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  passiveIncome: 0
   passiveIncomeText: {fileID: 1902946420}
+--- !u!114 &1866454047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866454039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c795b7f3620ab7c48ab02f5a0bb01ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1866454048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866454039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57d89fc1d92f1d41a214d89d2d34edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickMultiplier: 0
+  amountOfClicks: 0
 --- !u!1 &1875630756
 GameObject:
   m_ObjectHideFlags: 0
