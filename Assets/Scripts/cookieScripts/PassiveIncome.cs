@@ -28,6 +28,6 @@ public class PassiveIncome : MonoBehaviour
         score.score -= itemCost;
         // itemCost = itemCostToItem.addCostToItem;
         passiveIncomeText.text = string.Format("PassiveIncome: {0:0.000}", passiveIncome);
-
+        DataStructure.Instance.passiveIncome = passiveIncome;
     }
 }

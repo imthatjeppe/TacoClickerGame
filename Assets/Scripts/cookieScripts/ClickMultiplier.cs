@@ -20,15 +20,16 @@ public class ClickMultiplier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public void moreClicksPerClick()
     {
         if (score.score >= PassiveIncomeMeny.itemCost)
         {
-            clickMultiplier +=  amountOfClicks;
+            clickMultiplier += amountOfClicks;
             score.score -= PassiveIncomeMeny.itemCost;
+            DataStructure.Instance.clickMultiplier = clickMultiplier;
         }
     }
 }

@@ -33,7 +33,6 @@ public class PlayerData : MonoBehaviour
 
 			Debug.Log(data.score);
 			data.score = score.score;
-			score.addScoreToPlayerData();
 		}
 		else
 		{

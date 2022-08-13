@@ -24,12 +24,14 @@ public class RegisterHandler : MonoBehaviour
     public void RegisterUser()
     {
         DataStructure userData = new DataStructure();
+        FirebaseDatabase.DefaultInstance.SetPersistenceEnabled(false);
 
         auth.CreateUserWithEmailAndPasswordAsync(email.text, password.text);
 
         auth.SignInWithEmailAndPasswordAsync(email.text, password.text).ContinueWithOnMainThread(task =>
         {
             userData.userName = userName.text;
+            userData.clickMultiplier = 1;
             
             string json = JsonUtility.ToJson(userData);
 

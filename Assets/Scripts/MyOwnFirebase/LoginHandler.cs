@@ -28,6 +28,7 @@ public class LoginHandler : MonoBehaviour
     // Update is called once per frame
     public void LoginUser()
     {
+        FirebaseDatabase.DefaultInstance.SetPersistenceEnabled(false);
         auth.SignInWithEmailAndPasswordAsync(email.text, password.text).ContinueWithOnMainThread(task =>
         {
             if (task.IsFaulted)

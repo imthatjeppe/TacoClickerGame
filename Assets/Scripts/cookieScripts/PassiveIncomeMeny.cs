@@ -5,20 +5,17 @@ using UnityEngine.UI;
 
 public class PassiveIncomeMeny : MonoBehaviour
 {
-    
     public float itemCost;
     public float addPassiveIncome;
     
     public Text passiveIncomeText;
 
     private clickerScript score;
-    private addCost itemCostToItem;
     private PassiveIncome passiveIncome;
     void Start()
     {
         passiveIncome = FindObjectOfType<PassiveIncome>();
         score = FindObjectOfType<clickerScript>();
-        itemCostToItem = gameObject.GetComponent<addCost>();
     }
     // Update is called once per frame
     void Update()

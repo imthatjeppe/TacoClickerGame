@@ -5,15 +5,18 @@ using Firebase.Database;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SendDataToFirebase : MonoBehaviour
 {
-    private ClickMultiplier clickMultiplier;
+    ClickMultiplier clickMultiplier;
     private PassiveIncome passiveIncome;
     private clickerScript score;
 
     DatabaseReference db;
     FirebaseAuth auth;
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -21,25 +24,27 @@ public class SendDataToFirebase : MonoBehaviour
         db = FirebaseDatabase.DefaultInstance.RootReference;
 
         passiveIncome = FindObjectOfType<PassiveIncome>();
-        clickMultiplier = FindObjectOfType<ClickMultiplier>();
         score = FindObjectOfType<clickerScript>();
+        InvokeRepeating(nameof(SendToFirebase), 0, 1f);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Invoke(nameof(SendToFirebase), 0.1f);
     }
 
     private void SendToFirebase()
     {
-        DataStructure userData = new DataStructure();
+        //DataStructure userData = new DataStructure();
 
-        userData.clickMultiplier = clickMultiplier.clickMultiplier;
-        userData.passiveIncome = passiveIncome.passiveIncome;
-        userData.score = score.score;
+        //FirebaseDatabase.DefaultInstance.SetPersistenceEnabled(false);
 
-        string json = JsonUtility.ToJson(userData);
+        //userData.clickMultiplier = DataStructure.Instance.clickMultiplier;
+        //userData.passiveIncome = passiveIncome.passiveIncome;
+        //userData.score = score.score;
+
+        string json = JsonUtility.ToJson(DataStructure.Instance);
 
         db.Child("users").Child(auth.CurrentUser.UserId).SetRawJsonValueAsync(json);
 
