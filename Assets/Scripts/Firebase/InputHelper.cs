@@ -6,7 +6,7 @@ using TMPro;
 public class InputHelper : MonoBehaviour
 {
 	public bool SaveInputFieldData = true;
-	List<GameObject> fields;
+	public List<GameObject> fields;
 
 	void Start()
 	{

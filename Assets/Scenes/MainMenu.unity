@@ -2021,6 +2021,7 @@ GameObject:
   - component: {fileID: 1718202435}
   - component: {fileID: 1718202437}
   - component: {fileID: 1718202438}
+  - component: {fileID: 1718202439}
   m_Layer: 0
   m_Name: ScriptHandler
   m_TagString: Untagged
@@ -2085,6 +2086,22 @@ MonoBehaviour:
   email: {fileID: 1305200905}
   password: {fileID: 1748672164}
   playButton: {fileID: 535525225}
+--- !u!114 &1718202439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718202434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95dc7e8c6a3d9b47a358056bc6fa5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputFields:
+  - {fileID: 1718905714}
+  - {fileID: 1305200905}
+  - {fileID: 1748672164}
 --- !u!1 &1718905712
 GameObject:
   m_ObjectHideFlags: 0

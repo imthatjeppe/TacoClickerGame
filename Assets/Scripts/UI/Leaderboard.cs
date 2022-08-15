@@ -10,14 +10,12 @@ using System.Linq;
 public class Leaderboard : MonoBehaviour
 {
     DatabaseReference db;
-    FirebaseAuth auth;
 
     public GameObject ScoreElement;
     public Transform scoreboardContent;
     // Start is called before the first frame update
     void Start()
     {
-        auth = auth = FirebaseAuth.DefaultInstance;
         db = FirebaseDatabase.DefaultInstance.RootReference;
     }
 
