@@ -6,6 +6,7 @@ public class ClickMultiplier : MonoBehaviour
 {
     public float clickMultiplier;
     public float amountOfClicks;
+    public float clickerCost;
 
     private clickerScript score;
     private addCost itemCostToItem;
@@ -20,15 +21,15 @@ public class ClickMultiplier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        Debug.Log(DataStructure.Instance.clickMultiplier);
     }
 
     public void moreClicksPerClick()
     {
-        if (score.score >= PassiveIncomeMeny.itemCost)
+        if (score.score >= clickerCost)
         {
             clickMultiplier += amountOfClicks;
-            score.score -= PassiveIncomeMeny.itemCost;
+            score.score -= clickerCost;
             DataStructure.Instance.clickMultiplier = clickMultiplier;
         }
     }

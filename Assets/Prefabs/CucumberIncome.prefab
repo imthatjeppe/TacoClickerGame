@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -66,11 +66,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 49
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: e213af45bb662a4458e7dbf136258a90, type: 3}
+    m_FontSize: 44
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 49
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -78,9 +78,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cucumber Cost 300
+  m_Text: 'Cucumber: 300
 
-    Get one extra cookie a click'
+
+    One Extra Click'
 --- !u!1 &4499727836629695310
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +94,7 @@ GameObject:
   - component: {fileID: 4499727836629695306}
   - component: {fileID: 4499727836629695309}
   - component: {fileID: 4499727836629695308}
+  - component: {fileID: 741322310}
   m_Layer: 5
   m_Name: CucumberIncome
   m_TagString: Untagged
@@ -107,7 +109,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4499727836629695310}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -202,9 +204,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PassiveIncomeMeny, Assembly-CSharp
-        m_MethodName: CucumberIncome
+      - m_Target: {fileID: 741322310}
+        m_TargetAssemblyTypeName: ClickMultiplier, Assembly-CSharp
+        m_MethodName: moreClicksPerClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -214,3 +216,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &741322310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4499727836629695310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c57d89fc1d92f1d41a214d89d2d34edc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickMultiplier: 0
+  amountOfClicks: 1
+  clickerCost: 300

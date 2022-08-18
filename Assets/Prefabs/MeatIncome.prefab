@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7920562481810524675
+--- !u!1 &3705090114714248325
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7920562481810524684}
-  - component: {fileID: 7920562481810524686}
-  - component: {fileID: 7920562481810524685}
+  - component: {fileID: 3705090114714248324}
+  - component: {fileID: 3705090114714248326}
+  - component: {fileID: 3705090114714248327}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -18,18 +18,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7920562481810524684
+--- !u!224 &3705090114714248324
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481810524675}
+  m_GameObject: {fileID: 3705090114714248325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7920562481920203709}
+  m_Father: {fileID: 3705090115788046474}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -37,21 +37,21 @@ RectTransform:
   m_AnchoredPosition: {x: 5.275177, y: 0.40124512}
   m_SizeDelta: {x: 10.559753, y: -0.80218506}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7920562481810524686
+--- !u!222 &3705090114714248326
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481810524675}
+  m_GameObject: {fileID: 3705090114714248325}
   m_CullTransparentMesh: 1
---- !u!114 &7920562481810524685
+--- !u!114 &3705090114714248327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481810524675}
+  m_GameObject: {fileID: 3705090114714248325}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
@@ -78,11 +78,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Cucumber: 500
+  m_Text: 'Meat: 500
 
+    Passive Income
 
-    Two Extra Click'
---- !u!1 &7920562481920203708
+    + 2'
+--- !u!1 &3705090115788046475
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,53 +91,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7920562481920203709}
-  - component: {fileID: 7920562481920203704}
-  - component: {fileID: 7920562481920203711}
-  - component: {fileID: 7920562481920203710}
-  - component: {fileID: 7920562480883862102}
+  - component: {fileID: 3705090115788046474}
+  - component: {fileID: 3705090115788046471}
+  - component: {fileID: 3705090115788046468}
+  - component: {fileID: 3705090115788046469}
+  - component: {fileID: 2217953825994451022}
   m_Layer: 5
-  m_Name: Mushroom
+  m_Name: MeatIncome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7920562481920203709
+--- !u!224 &3705090115788046474
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481920203708}
+  m_GameObject: {fileID: 3705090115788046475}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 7920562481810524684}
+  - {fileID: 3705090114714248324}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 217.47, y: 50.357}
-  m_SizeDelta: {x: 347.51, y: 200.7144}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7920562481920203704
+--- !u!222 &3705090115788046471
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481920203708}
+  m_GameObject: {fileID: 3705090115788046475}
   m_CullTransparentMesh: 1
---- !u!114 &7920562481920203711
+--- !u!114 &3705090115788046468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481920203708}
+  m_GameObject: {fileID: 3705090115788046475}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -160,13 +161,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7920562481920203710
+--- !u!114 &3705090115788046469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481920203708}
+  m_GameObject: {fileID: 3705090115788046475}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -200,13 +201,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 7920562481920203711}
+  m_TargetGraphic: {fileID: 3705090115788046468}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7920562480883862102}
-        m_TargetAssemblyTypeName: ClickMultiplier, Assembly-CSharp
-        m_MethodName: moreClicksPerClick
+      - m_Target: {fileID: 2217953825994451022}
+        m_TargetAssemblyTypeName: PassiveIncomeMeny, Assembly-CSharp
+        m_MethodName: passiveIncomeToItem
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -216,18 +217,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7920562480883862102
+--- !u!114 &2217953825994451022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7920562481920203708}
+  m_GameObject: {fileID: 3705090115788046475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c57d89fc1d92f1d41a214d89d2d34edc, type: 3}
+  m_Script: {fileID: 11500000, guid: 34d102fd29628b245ad8da3c3ba74ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickMultiplier: 0
-  amountOfClicks: 2
-  clickerCost: 500
+  itemCost: 500
+  addPassiveIncome: 2
+  passiveIncomeText: {fileID: 0}

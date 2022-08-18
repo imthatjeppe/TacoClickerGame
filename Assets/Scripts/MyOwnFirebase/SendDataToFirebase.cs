@@ -25,7 +25,7 @@ public class SendDataToFirebase : MonoBehaviour
 
         passiveIncome = FindObjectOfType<PassiveIncome>();
         score = FindObjectOfType<clickerScript>();
-        InvokeRepeating(nameof(SendToFirebase), 0, 1f);
+        InvokeRepeating(nameof(SendToFirebase), 0, 0.1f);
         
     }
 
